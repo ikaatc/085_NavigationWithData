@@ -33,7 +33,7 @@ enum class PengelolaHalaman {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EsJumboAppBar(
-    bisaNavigasiBacl: Boolean,
+    bisaNavigasiBack: Boolean,
     navigasiUp: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -42,10 +42,13 @@ fun EsJumboAppBar(
         colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
         modifier = modifier,
         navigationIcon = {
-            IconButton(onClick = navigasiUp) {
-                Icon(
-                    imageVector = Icons.Filled.ArrowBack,
-                    contentDescription = stringResource(R.string.back_button))
+            if (bisaNavigasiBack) {
+                IconButton(onClick = navigasiUp) {
+                    Icon(
+                        imageVector = Icons.Filled.ArrowBack,
+                        contentDescription = stringResource(R.string.back_button)
+                    )
+                }
             }
         }
     )
@@ -59,7 +62,7 @@ fun EsJumboApp(
 ) {
     Scaffold(topBar = {
         EsJumboAppBar(
-            bisaNavigasiBacl = false,
+            bisaNavigasiBack = false,
             navigasiUp = { /*TODO: implement back navigation*/
             }
         )
