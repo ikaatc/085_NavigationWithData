@@ -13,4 +13,6 @@ fun HalamanForm() {
     var textNama by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }
     var textTlp by remember { mutableStateOf("") }
+
+    var ListDataTxt: MutableList<String> = mutableListOf(textNama, textAlamat, textTlp)
 }
