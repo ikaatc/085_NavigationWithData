@@ -2,6 +2,7 @@ package com.example.esjumbo
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -45,6 +46,8 @@ fun HalamanForm() {
             fontSize = 25.sp,
             fontWeight = FontWeight.Bold)
 
+        Spacer(modifier = Modifier.padding(16.dp))
+
         OutlinedTextField(
             value = textNama,
             singleLine = true,
@@ -52,6 +55,8 @@ fun HalamanForm() {
             modifier = Modifier.fillMaxWidth(),
             onValueChange = { textNama = it },
             label = { Text(text = "Nama") })
+
+        Spacer(modifier = Modifier.padding(16.dp))
 
         OutlinedTextField(
             value = textAlamat,
@@ -61,6 +66,8 @@ fun HalamanForm() {
             onValueChange = { textAlamat = it },
             label = { Text(text = "Alamat") })
 
+        Spacer(modifier = Modifier.padding(16.dp))
+
         OutlinedTextField(
             value = textTlp,
             singleLine = true,
@@ -69,5 +76,7 @@ fun HalamanForm() {
             modifier = Modifier.fillMaxWidth(),
             onValueChange = { textTlp = it },
             label = { Text(text = "Nomor Telepon") })
+
+        Spacer(modifier = Modifier.padding(16.dp))
     }
 }
