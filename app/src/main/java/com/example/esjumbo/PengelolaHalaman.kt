@@ -26,6 +26,7 @@ import com.example.esjumbo.data.SumberData.flavors
 
 enum class PengelolaHalaman {
     Home,
+    Formulir,
     Rasa,
     Summary
 }
