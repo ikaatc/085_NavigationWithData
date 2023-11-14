@@ -87,6 +87,8 @@ fun HalamanForm() {
                 Text(text = stringResource(id = R.string.cancel))
             }
 
+            Spacer(modifier = Modifier.padding(50.dp))
+
             Button(onClick = { /*TODO*/ }) {
                 Text(text = stringResource(id = R.string.submit))
             }
