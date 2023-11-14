@@ -23,14 +23,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview
 @Composable
-fun HalamanForm() {
+fun HalamanForm(
+    onSubmitButtonClick: (MutableList<String>) -> Unit,
+    onCancelButtonClick: (MutableList<String>) -> Unit
+) {
     var textNama by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }
     var textTlp by remember { mutableStateOf("") }
@@ -83,13 +84,13 @@ fun HalamanForm() {
         Spacer(modifier = Modifier.padding(16.dp))
 
         Row {
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { onCancelButtonClick(ListDataTxt) }) {
                 Text(text = stringResource(id = R.string.cancel))
             }
 
             Spacer(modifier = Modifier.padding(50.dp))
 
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { onSubmitButtonClick(ListDataTxt) }) {
                 Text(text = stringResource(id = R.string.submit))
             }
         }
