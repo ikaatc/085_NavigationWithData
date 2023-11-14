@@ -50,5 +50,13 @@ fun HalamanForm() {
             modifier = Modifier.fillMaxWidth(),
             onValueChange = { textNama = it },
             label = { Text(text = "Nama") })
+
+        OutlinedTextField(
+            value = textAlamat,
+            singleLine = true,
+            shape = MaterialTheme.shapes.large,
+            modifier = Modifier.fillMaxWidth(),
+            onValueChange = { textAlamat = it },
+            label = { Text(text = "Alamat") })
     }
 }
